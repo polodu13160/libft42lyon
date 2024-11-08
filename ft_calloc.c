@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 15:15:08 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/08 18:21:12 by pde-petr         ###   ########.fr       */
+/*   Created: 2024/11/08 18:13:36 by pde-petr          #+#    #+#             */
+/*   Updated: 2024/11/08 18:21:45 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "stdlib.h"
 #include "libft.h"
 
-void	ft_bzero(void *s, t_size n)
+void	*ft_calloc(t_size count, t_size size)
 {
-    ft_memset(s,'\0', n);
+    void *ptr;
+    ptr = malloc(size * count);
+    if (ptr == NULL)
+        return NULL;
+    ft_bzero(ptr, size * count );
+    return (ptr);
 }
