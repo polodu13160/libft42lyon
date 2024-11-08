@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 15:18:25 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/08 13:50:06 by pde-petr         ###   ########.fr       */
+/*   Created: 2024/11/08 16:35:51 by pde-petr          #+#    #+#             */
+/*   Updated: 2024/11/08 16:47:48 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_size	ft_strlen(const char *c)
+void	*ft_memchr(const void *s, int c, t_size n)
 {
-	t_size	i;
+    char *str;
 
-	i = 0;
-	while (c[i])
-		i++;
-	return (i);
+    str = (char *)s;
+    
+	while (*str)
+	{
+		if (c == *str)
+			return ((void *)s);
+		s++;
+        str++;
+	}
+	return (0);
 }
 
-// int main()
+// int   main()
 // {
-//     char *str = "Hello";
-//     printf("%d\n", ft_strlen(str));
+//     char str[] = "Hello";
+//     printf("%s\n", ft_memchr(str, 'l', 5));
 //     return (0);
 // }

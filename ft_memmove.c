@@ -6,28 +6,28 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:39:15 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/07 15:46:18 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:53:58 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, t_size n)
 {
-	size_t			i;
+	t_size			i;
 	unsigned char	*d;
 	unsigned char	*s;
 
 	i = 0;
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
-	if (s < d) // pour eviter le chevauchment 
+	if (s < d) // pour eviter le chevauchment
 	{
 		i = n;
 		printf("%s\n", d);
 		while (n > 0)
 		{
-			d[n-1] = s[n-1]; //lenght -1
+			d[n - 1] = s[n - 1]; // lenght -1
 			n--;
 		}
 	}
@@ -40,25 +40,21 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		}
 	}
 	return (dest);
-	
 }
 /*
 int	main(void)
 {
 	char buffer1[50] = "ABCD";
 	char buffer2[50] = "ABCD";
+pointer1 : permet de spécifier l'adresse du premier bloc mémoire à comparer.
+pointer2 : permet de spécifier l'adresse du second bloc mémoire à comparer.
+size : indique le nombre d'octets maximal à comparer.
 
-	
-	printf("Avant memmove personnalisé (chevauchement) : %s\n", buffer1);
-	ft_memmove(buffer1 + 1, buffer1, 1);
-	printf("Après memmove personnalisé (chevauchement) : %s\n", buffer1);
-
-	
 	printf("Avant memmove standard (chevauchement) : %s\n", buffer2);
 	memmove(buffer2 + 1, buffer2, 1);
 	printf("Après memmove standard (chevauchement) : %s\n", buffer2);
 
-	
+
 	if (strcmp(buffer1, buffer2) == 0)
 	{
 		printf("Les deux fonctions produisent le même résultat.\n");

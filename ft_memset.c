@@ -6,13 +6,13 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:43:32 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/06 15:13:42 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/08 13:50:06 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, t_size len)
 {
 	int		i;
 	char	*str;
