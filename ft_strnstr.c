@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:11:51 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/12 15:41:20 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/12 17:46:45 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, t_size length)
 
 	i = 0;
 	while (*needle == '\0')
-		return (&*haystack);
+		return ((char *)&*haystack);
 	while (haystack[i] && i < length)
 	{
 		j = 0;
@@ -34,9 +34,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, t_size length)
 	return (0);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char *str = "Hello";
 	printf("%s\n", ft_strnstr(str, "", 4));
 	return (0);
-}
+} */
