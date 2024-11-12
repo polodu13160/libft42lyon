@@ -14,16 +14,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-    while (*s)
-        s++;
-    s--;
-    while (*s > 0)
-    {
-        if (*s == c)
-            return (char *)s;
-        s--;
-    }
-    return (0);  
+	while (*s)
+		s++;
+	s--;
+	while (*s > 0)
+	{
+		if (*s == c)
+			return ((char *)s);
+		s--;
+	}
+	return (0);
 }
 
 // int main()
@@ -32,5 +32,3 @@ char	*ft_strrchr(const char *s, int c)
 //     printf("%s\n", ft_strrchr(str, 'l'));
 //     return (0);
 // }
-
-

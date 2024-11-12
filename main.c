@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-int main()
+int	main(void)
 {
-    void *str;
-    
-    ft_memset(str, "4568", 5);
-    return (0);
+	void *str;
+
+	ft_memset(str, "4568", 5);
+	return (0);
 }

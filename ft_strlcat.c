@@ -20,13 +20,12 @@ t_size	ft_strlcat(char *dst, const char *src, t_size size)
 
 	len_dst_with_size = 0;
 	len_src = ft_strlen(src);
-    if (size == 0)
-            return (len_src);
+	if (size == 0)
+		return (len_src);
 	while (dst[len_dst_with_size] != '\0' && len_dst_with_size < size)
 	{
 		len_dst_with_size++;
 	}
-    
 	i = 0;
 	while (len_dst_with_size + i < size && src[i] != '\0')
 	{

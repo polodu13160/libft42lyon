@@ -22,7 +22,7 @@ void	*ft_memset(void *b, int c, t_size len)
 	while (len)
 	{
 		*str = (unsigned char)c;
-        //quel est la difference avec c seul ??????
+		// quel est la difference avec c seul ??????
 		len--;
 		str++;
 	}

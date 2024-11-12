@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:35:51 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/08 16:47:48 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/12 13:25:13 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 void	*ft_memchr(const void *s, int c, t_size n)
 {
-    char *str;
+	char	*str;
 
-    str = (char *)s;
-    
+	str = (char *)s;
 	while (*str)
 	{
 		if (c == *str)
 			return ((void *)s);
 		s++;
-        str++;
+		str++;
 	}
 	return (0);
 }

@@ -10,19 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strdup(const char *s)
 {
-    char *str;
-    t_size len;
+	char *str;
+	t_size len;
 
-    len = ft_strlen(s);
-    str = (char *)malloc(len + 1);
-    if (str == NULL)
-        return (NULL);
-    ft_memcpy(str, s, len);
-    str[len] = '\0';
-    return (str);
+	len = ft_strlen(s);
+	str = (char *)malloc(len + 1);
+	if (str == NULL)
+		return (NULL);
+	ft_memcpy(str, s, len);
+	str[len] = '\0';
+	return (str);
 }
