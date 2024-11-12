@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:43:32 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/08 13:50:06 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/12 15:22:07 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,17 @@ void	*ft_memset(void *b, int c, t_size len)
 	while (len)
 	{
 		*str = (unsigned char)c;
-		// quel est la difference avec c seul ??????
 		len--;
 		str++;
 	}
 	return (b);
 }
-int	main(void)
+/* quel est la difference avec c seul ?????? */
+
+/* int	main(void)
 {
 	char str[50] = "Hello World";
 	memset(str, -1, 11);
 	printf("%s\n", str);
 	return (0);
-}
+} */

@@ -6,12 +6,13 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:43:38 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/08 18:20:55 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/12 14:06:11 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 typedef unsigned long	t_size;
 int						ft_isalpha(int c);
 int						ft_isdigit(int c);
@@ -32,7 +33,8 @@ char					*ft_strrchr(const char *s, int c);
 int						ft_strncmp(const char *s1, const char *s2, t_size n);
 void					*ft_memchr(const void *s, int c, t_size n);
 int						ft_memcmp(const void *s1, const void *s2, t_size n);
-char					*ft_strnstr(const char *haystack, const char *needle, t_size len);
+char					*ft_strnstr(const char *haystack, const char *needle,
+							t_size len);
 int						ft_atoi(const char *str);
 void					*ft_calloc(t_size count, t_size size);
 #endif

@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:39:15 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/08 16:53:58 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/12 15:25:46 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,12 @@ void	*ft_memmove(void *dest, const void *src, t_size n)
 	i = 0;
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
-	if (s < d) // pour eviter le chevauchment
+	if (s < d)
 	{
 		i = n;
-		printf("%s\n", d);
 		while (n > 0)
 		{
-			d[n - 1] = s[n - 1]; // lenght -1
+			d[n - 1] = s[n - 1];
 			n--;
 		}
 	}
@@ -41,6 +40,7 @@ void	*ft_memmove(void *dest, const void *src, t_size n)
 	}
 	return (dest);
 }
+
 /*
 int	main(void)
 {

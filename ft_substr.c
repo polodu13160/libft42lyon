@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:24:02 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/12 11:33:29 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/12 15:29:44 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_substr(char const *s, unsigned int start, t_size len)
 {
-	char *string_malloc;
-	t_size i;
+	char	*string_malloc;
+	t_size	i;
 
 	string_malloc = malloc(sizeof(char) * len);
 	if (string_malloc == NULL)
