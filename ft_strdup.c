@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:22:23 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/12 14:47:00 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/13 20:43:30 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s)
 	t_size	len;
 
 	len = ft_strlen(s);
-	str = (char *)malloc(len + 1);
+	str = ft_calloc(len + 1, sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	ft_memcpy(str, s, len);

@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 13:16:10 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/13 18:59:25 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/13 20:43:44 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 t_size	ft_strlcat(char *dst, const char *src, t_size size)
 {
 	t_size	len_src;
-	int		len_dst_with_size;
-	int		i;
+	t_size	len_dst_with_size;
+	t_size	i;
 
 	len_dst_with_size = 0;
 	len_src = ft_strlen(src);

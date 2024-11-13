@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:11:51 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/13 19:07:55 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/13 20:43:57 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strnstr(const char *haystack, const char *needle, t_size length)
 {
 	t_size	i;
-	int		j;
+	t_size	j;
 
 	i = 0;
 	if (*needle == '\0')
