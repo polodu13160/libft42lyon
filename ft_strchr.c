@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:16:51 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/12 15:26:48 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/13 18:59:59 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s)
+	while (*s || (*s == (const char)c))
 	{
-		if (c == *s)
+		if ((const char)c == *s)
 			return ((char *)s);
 		s++;
 	}

@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:50:26 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/12 14:04:52 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/13 18:59:13 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 t_size	ft_strlcpy(char *dst, const char *src, t_size size)
 {
 	t_size	len_s;
-	t_size	len_d;
 	t_size	i;
 
 	len_s = ft_strlen(src);
-	len_d = ft_strlen(src);
 	i = 0;
-	while (i < size)
+	if (size == 0)
+		return (len_s);
+	while (i < size - 1 && src[i])
 	{
 		dst[i] = src[i];
 		i++;
@@ -33,10 +33,10 @@ t_size	ft_strlcpy(char *dst, const char *src, t_size size)
 // int	main(void)
 // {
 // 	char src[] = "Hhjhhhhhhhhhhhhhhhk";
-// 	char dst[10] = "W";
+// 	char dst[1] = "";
 // 	t_size size = 5;
 
-// 	//printf("%zu\n, %s", strlcpy(dst, src, size), dst);
-// 	printf("%d\n, %s", ft_strlcpy(dst, src, size), dst);
+// 	printf("%d\n, %s", strlcpy(dst, src, size), dst);
+// 	//printf("%d\n, %s", ft_strlcpy(dst, src, size), dst);
 // 	return (0);
 // }

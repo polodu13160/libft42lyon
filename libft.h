@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:43:38 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/12 14:06:11 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/13 17:49:00 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,5 @@ char					*ft_strnstr(const char *haystack, const char *needle,
 							t_size len);
 int						ft_atoi(const char *str);
 void					*ft_calloc(t_size count, t_size size);
+char					*ft_strdup(const char *s);
 #endif

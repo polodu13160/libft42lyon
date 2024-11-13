@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:39:15 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/12 15:25:46 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/13 18:58:50 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,17 @@
 
 void	*ft_memmove(void *dest, const void *src, t_size n)
 {
-	t_size			i;
-	unsigned char	*d;
-	unsigned char	*s;
-
-	i = 0;
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	if (s < d)
+	if (!dest && !src)
+		return (dest);
+	if (src < dest)
 	{
-		i = n;
-		while (n > 0)
+		while (n-- > 0)
 		{
-			d[n - 1] = s[n - 1];
-			n--;
+			((unsigned char *)dest)[n] = ((unsigned char *)src)[n];
 		}
 	}
 	else
-	{
-		while (i < n)
-		{
-			d[i] = s[i];
-			i++;
-		}
-	}
+		ft_memcpy(dest, src, n);
 	return (dest);
 }
 
