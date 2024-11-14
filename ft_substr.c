@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:24:02 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/12 15:29:44 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/14 14:27:13 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,42 @@ char	*ft_substr(char const *s, unsigned int start, t_size len)
 {
 	char	*string_malloc;
 	t_size	i;
+	t_size	len_str;
 
-	string_malloc = malloc(sizeof(char) * len);
-	if (string_malloc == NULL)
-	{
+	if (!s)
 		return (NULL);
-	}
+	len_str = ft_strlen(s);
+	if (len_str <= start)
+		len = 0;
+	else if (len > (len_str - start))
+		len = (len_str - start);
+	string_malloc = ft_calloc(len + 1, sizeof(char));
+	if (string_malloc == NULL)
+		return (NULL);
 	i = 0;
 	while (i < len && s[start] != '\0')
 	{
-		string_malloc[i] = s[start];
+		string_malloc[i] = s[start + i];
 		i++;
-		start++;
 	}
+	string_malloc[i] = '\0';
 	return (string_malloc);
 }
+
+// int	main(void)
+// {
+// 	char	*str;
+// 	size_t	size;
+// 	char	*ret;
+
+// 	str = "01234";
+// 	size = 10;
+// 	ret = ft_substr(str, 10, size);
+// 	if (!strncmp(ret, "", 1))
+// 	{
+// 		free(ret);
+// 		exit(0); // TEST_SUCCESS
+// 	}
+// 	free(ret);
+// 	exit(1); // TEST_FAILED
+// }
