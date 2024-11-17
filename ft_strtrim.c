@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 15:25:22 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/17 15:58:57 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/17 19:24:42 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		if (set[i] != s1[end])
 			break ;
 	}
-	return (ft_substr(s1, start, end - start + 1 ));
+	return (ft_substr(s1, start, end - start + 1));
 }
 // int	main(void)
 // {

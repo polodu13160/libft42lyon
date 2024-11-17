@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 16:34:00 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/17 18:31:12 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/17 19:21:41 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,22 +32,21 @@ static int	ft_count_words(char const *s, char c)
 static char	**ft_free_all(char **tab, int x)
 {
 	while (x > 0)
+	{
 		free(tab[--x]);
+	}
 	free(tab);
 	return (NULL);
 }
 
-char	**ft_split(char const *s, char c)
+int	fill_tab(char const *s, char c, char **tab)
 {
-	int		i;
-	int		j;
-	int		x;
-	char	**tab;
+	int	j;
+	int	i;
+	int	x;
 
-	if (!s || !(tab = ft_calloc(ft_count_words(s, c) + 1, sizeof(char *))))
-		return (NULL);
-	x = 0;
 	i = 0;
+	x = 0;
 	while (s[i])
 	{
 		if ((i == 0 && s[i] != c) || (s[i - 1] == c && s[i] != c))
@@ -55,14 +54,34 @@ char	**ft_split(char const *s, char c)
 			j = i;
 			while (s[j] && s[j] != c)
 				j++;
-			if (!(tab[x++] = ft_substr(s, i, j - i)))
-				return (ft_free_all(tab, x - 1));
+			tab[x] = ft_substr(s, i, j - i);
+			if (!tab[x++])
+			{
+				ft_free_all(tab, x);
+				return (0);
+			}
 			i = j;
 		}
 		else
 			i++;
 	}
-	tab[x] = NULL;
+	return (1);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	int		words;
+	char	**tab;
+
+	if (!s)
+		return (NULL);
+	words = ft_count_words(s, c);
+	tab = ft_calloc(words + 1, sizeof(char *));
+	if (!tab)
+		return (NULL);
+	if (fill_tab(s, c, tab) != 1)
+		return (NULL);
+	tab[words] = NULL;
 	return (tab);
 }
 
@@ -74,7 +93,7 @@ char	**ft_split(char const *s, char c)
 // 	int i;
 
 // 	s = "Hello, world !";
-// 		c = ' ';
+// 	c = ' ';
 // 	result = ft_split(s, c);
 // 	if (result)
 // 	{

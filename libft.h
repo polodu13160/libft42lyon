@@ -6,13 +6,14 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:43:38 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/17 16:25:38 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/17 18:39:43 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-#include <stdlib.h>
+
+# include <stdlib.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
