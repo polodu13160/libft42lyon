@@ -6,15 +6,15 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:27:33 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/13 19:01:38 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/17 15:58:57 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, t_size n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	t_size	i;
+	size_t	i;
 
 	i = 0;
 	if (n == 0)

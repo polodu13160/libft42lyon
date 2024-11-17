@@ -6,18 +6,18 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:24:02 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/14 14:27:13 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/17 15:58:57 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "stdlib.h"
 
-char	*ft_substr(char const *s, unsigned int start, t_size len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*string_malloc;
-	t_size	i;
-	t_size	len_str;
+	size_t	i;
+	size_t	len_str;
 
 	if (!s)
 		return (NULL);

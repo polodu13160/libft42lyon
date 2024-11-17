@@ -6,16 +6,16 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:50:26 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/13 18:59:13 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/17 15:58:57 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_size	ft_strlcpy(char *dst, const char *src, t_size size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	t_size	len_s;
-	t_size	i;
+	size_t	len_s;
+	size_t	i;
 
 	len_s = ft_strlen(src);
 	i = 0;
@@ -34,7 +34,7 @@ t_size	ft_strlcpy(char *dst, const char *src, t_size size)
 // {
 // 	char src[] = "Hhjhhhhhhhhhhhhhhhk";
 // 	char dst[1] = "";
-// 	t_size size = 5;
+// 	size_t size = 5;
 
 // 	printf("%d\n, %s", strlcpy(dst, src, size), dst);
 // 	//printf("%d\n, %s", ft_strlcpy(dst, src, size), dst);

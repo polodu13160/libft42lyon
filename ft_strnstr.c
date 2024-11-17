@@ -6,16 +6,16 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:11:51 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/13 20:43:57 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/17 15:58:57 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, t_size length)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t length)
 {
-	t_size	i;
-	t_size	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	if (*needle == '\0')

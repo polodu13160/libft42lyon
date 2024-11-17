@@ -6,15 +6,15 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:18:25 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/12 14:04:55 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/17 15:58:57 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_size	ft_strlen(const char *c)
+size_t	ft_strlen(const char *c)
 {
-	t_size	i;
+	size_t	i;
 
 	i = 0;
 	while (c[i])

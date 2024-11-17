@@ -6,15 +6,15 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:51:24 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/13 17:30:36 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/17 15:58:57 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, t_size n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	t_size			i;
+	size_t			i;
 	unsigned char	*str1;
 	unsigned char	*str2;
 

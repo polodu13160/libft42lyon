@@ -6,16 +6,16 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:35:51 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/13 15:25:52 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/17 15:58:57 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, t_size n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	char	*str;
-	t_size	i;
+	size_t	i;
 
 	str = (char *)s;
 	i = 0;

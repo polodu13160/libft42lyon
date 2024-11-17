@@ -6,17 +6,17 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 13:16:10 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/13 20:43:44 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/17 15:58:57 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_size	ft_strlcat(char *dst, const char *src, t_size size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	t_size	len_src;
-	t_size	len_dst_with_size;
-	t_size	i;
+	size_t	len_src;
+	size_t	len_dst_with_size;
+	size_t	i;
 
 	len_dst_with_size = 0;
 	len_src = ft_strlen(src);

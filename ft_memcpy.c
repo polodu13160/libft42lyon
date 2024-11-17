@@ -6,15 +6,15 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:24:25 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/13 17:59:54 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/17 15:58:57 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, t_size n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	t_size			i;
+	size_t			i;
 	unsigned char	*d;
 	unsigned char	*s;
 
