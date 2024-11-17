@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 19:27:21 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/17 22:15:55 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/17 22:31:22 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,6 @@ char	*ft_itoa(int n)
 {
 	char	*tab;
 	int		count;
-	int		i;
 
 	if (n == -2147483648)
 	{
@@ -91,16 +90,18 @@ char	*ft_itoa(int n)
 	else
 	{
 		count = count_tab(n);
-		tab = ft_calloc(count, sizeof(char));
+		tab = ft_calloc(count + 1, sizeof(char));
+		if (!tab)
+			return (NULL);
 		add_to_array(n, tab);
 		reverse_tab(tab, count);
 	}
 	return (tab);
 }
-
-int	main(void)
-{
-	int a = 0;
-	printf("%s\n", ft_itoa(a));
-	return (0);
-}
+// int	main(void)
+// {
+//     char *res;
+// 	printf("%s\n", res = ft_itoa(9));
+//     free(res);
+// 	return (0);
+// }
