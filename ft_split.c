@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pauldepetrini <pauldepetrini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 16:34:00 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/17 19:21:41 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/19 15:26:53 by pauldepetri      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	ft_count_words(char const *s, char c)
 	count = 0;
 	while (s[i])
 	{
-		if ((i == 0 && s[i] != c) || (s[i - 1] == c && s[i] != c))
+		if (s[i] != c && (i == 0 || s[i - 1] == c))
 			count++;
 		i++;
 	}
@@ -49,7 +49,7 @@ int	fill_tab(char const *s, char c, char **tab)
 	x = 0;
 	while (s[i])
 	{
-		if ((i == 0 && s[i] != c) || (s[i - 1] == c && s[i] != c))
+		if (s[i] != c && (i == 0 || s[i - 1] == c))
 		{
 			j = i;
 			while (s[j] && s[j] != c)

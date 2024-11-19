@@ -6,7 +6,7 @@
 /*   By: pauldepetrini <pauldepetrini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:50:24 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/19 14:05:52 by pauldepetri      ###   ########.fr       */
+/*   Updated: 2024/11/19 14:45:56 by pauldepetri      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,10 +86,10 @@ int	ft_atoi(const char *str)
 // 	return (0);
 // }
 
-int	main(void)
-{
-	char *str = "-9223372036854775809";
-	printf("%d\n", ft_atoi(str));
-	printf("%d\n", atoi(str));
-	return (0);
-}
+// int	main(void)
+// {
+// 	char *str = "-9223372036854775809";
+// 	printf("%d\n", ft_atoi(str));
+// 	printf("%d\n", atoi(str));
+// 	return (0);
+// }

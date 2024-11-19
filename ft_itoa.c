@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pauldepetrini <pauldepetrini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 19:27:21 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/17 22:31:22 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/19 15:04:02 by pauldepetri      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static void	add_to_array(int n, char *tab)
 	}
 	if (neg == 1)
 		tab[i++] = '-';
-	tab[++i] = '\0';
+	// tab[i++] = '\0';
 }
 
 static void	reverse_tab(char *tab, int count)
