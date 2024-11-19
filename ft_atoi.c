@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pauldepetrini <pauldepetrini@student.42    +#+  +:+       +#+        */
+/*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:50:24 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/19 14:45:56 by pauldepetri      ###   ########.fr       */
+/*   Updated: 2024/11/19 17:57:43 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,13 @@ int	ft_atoi(const char *str)
 	neg = 1;
 	while ((*str >= 9 && *str <= 13) || (*str == 32))
 		str++;
-	if ((*str) == '+' || *str == '-')
+	if ((*str) == 43 || *str == '-')
 	{
-		if (*str == '-')
+		if (*(str++) == '-')
 			neg = -1;
-		str++;
 	}
 	while (*str >= 48 && *str <= 57)
 	{
-		// printf("%d\n", neg);
 		if (number > (LONG_MAX - (*str - 48)) / 10)
 		{
 			if (neg == 1)
