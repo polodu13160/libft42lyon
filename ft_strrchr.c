@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pauldepetrini <pauldepetrini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:22:58 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/13 15:02:25 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/19 16:18:40 by pauldepetri      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,32 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	char	*ptr;
 
-	i = 0;
-	while (s[i])
-		i++;
-	while (i >= 0)
+	ptr = NULL;
+	while (*s != '\0')
 	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
-		i--;
+		if (*s == c)
+			ptr = (char *)s;
+		s++;
 	}
-	return (0);
+	if (c == '\0')
+		return ((char *)s);
+	return (ptr);
 }
 
-// int main()
+// char	*ft_strrchr(const char *s, int c)
 // {
-//     char *str = "Helo";
-//     printf("%s\n", ft_strrchr(str, 'l'));
-//     return (0);
+// 	int	i;
+
+// 	i = 0;
+// 	while (s[i])
+// 		i++;
+// 	while (i >= 0)
+// 	{
+// 		if (s[i] == (char)c)
+// 			return ((char *)&s[i]);
+// 		i--;
+// 	}
+// 	return (0);
 // }
