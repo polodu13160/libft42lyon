@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pauldepetrini <pauldepetrini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:50:24 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/18 14:09:12 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/19 14:05:52 by pauldepetri      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,66 @@ int	ft_atoi(const char *str)
 	}
 	while (*str >= 48 && *str <= 57)
 	{
+		// printf("%d\n", neg);
+		if (number > (LONG_MAX - (*str - 48)) / 10)
+		{
+			if (neg == 1)
+				return (-1);
+			else
+				return (0);
+		}
 		number = number * 10 + (*str - 48);
 		str++;
-		if (number > INT_MAX && neg == 1)
-			return (1);
-		if (number < INT_MIN && neg == -1)
-			return (-1);
 	}
-	return (number * neg);
+	return ((int)number * neg);
 }
-
-// int    main()
+// void	test_ft_atoi(const char *str)
 // {
-//     char *str = "       A123";
-//     printf("%d\n", ft_atoi(str));
-//     return (0);
+// 	int	result;
+// 	int	expected;
+
+// 	result = ft_atoi(str);
+// 	expected = atoi(str);
+// 	if (result == expected)
+// 		printf("Test passed for input % s : %d\n", str, result);
+// 	else
+// 		printf("Test failed for input % s : got %d, expected %d\n", str,
+// 			result, expected);
 // }
+
+// int	main(void)
+// {
+// 	// Tests de base
+// 	test_ft_atoi("123");
+// 	test_ft_atoi("-123");
+// 	test_ft_atoi("+123");
+// 	test_ft_atoi("0");
+// 	test_ft_atoi("-0");
+// 	// Tests avec des espaces blancs
+// 	test_ft_atoi("   123");
+// 	test_ft_atoi("\t\n\r\v\f123");
+// 	// Tests avec des caractères non numériques
+// 	test_ft_atoi("123abc");
+// 	test_ft_atoi("abc123");
+// 	// Tests de dépassement de capacité
+// 	test_ft_atoi("9223372036854775807");  // LONG_MAX
+// 	test_ft_atoi("-9223372036854775808"); // LONG_MIN
+// 	test_ft_atoi("9223372036854775808");  // LONG_MAX + 1
+// 	test_ft_atoi("-9223372036854775809"); // LONG_MIN - 1
+// 	// Tests avec des chaînes vides et des signes seuls
+// 	test_ft_atoi("");
+// 	test_ft_atoi("+");
+// 	test_ft_atoi("-");
+// 	// Tests avec des nombres très grands
+// 	test_ft_atoi("1234567892230000222132456");
+// 	test_ft_atoi("-1234567892230000222132456");
+// 	return (0);
+// }
+
+int	main(void)
+{
+	char *str = "-9223372036854775809";
+	printf("%d\n", ft_atoi(str));
+	printf("%d\n", atoi(str));
+	return (0);
+}
