@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:51:24 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/17 15:58:57 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/19 20:46:34 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (str1[i] != str2[i])
-			return ((int)str1[i] - str2[i]);
+			return (str1[i] - str2[i]);
 		i++;
 	}
 	return (0);

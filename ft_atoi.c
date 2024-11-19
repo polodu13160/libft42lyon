@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:50:24 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/19 18:58:06 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/19 20:41:09 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ int	ft_atoi(const char *str)
 	neg = 1;
 	while ((*str >= 9 && *str <= 13) || (*str == 32))
 		str++;
-	if ((*str) == 43 || *str == '-')
+	if ((*str) == 43 || *str == 45)
 	{
-		if (*(str++) == '-')
+		if (*(str++) == 45)
 			neg = -1;
 	}
 	while (*str >= 48 && *str <= 57)

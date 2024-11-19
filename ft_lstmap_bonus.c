@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 19:49:28 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/19 20:19:29 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/19 20:59:08 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *new_list;
-	t_list *new_elem;
+	t_list	*new_list;
+	t_list	*new_elem;
 
 	new_list = NULL;
-
 	if (lst && f && del)
 	{
 		while (lst)
