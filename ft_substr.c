@@ -6,12 +6,11 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:24:02 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/17 15:58:57 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/20 16:30:38 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdlib.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
