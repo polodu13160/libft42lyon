@@ -6,19 +6,16 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 15:25:22 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/17 19:24:42 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/21 21:18:01 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+static int	strtrim_start(char const *s1, char const *set, size_t start)
 {
 	size_t	i;
-	size_t	start;
-	size_t	end;
 
-	start = 0;
 	while (s1[start])
 	{
 		i = 0;
@@ -29,6 +26,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 		else
 			break ;
 	}
+	return (start);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t	i;
+	size_t	start;
+	size_t	end;
+
+	start = 0;
+	if (!s1 || !set)
+		return (NULL);
+	start = strtrim_start(s1, set, start);
 	end = ft_strlen(s1);
 	while (s1[--end])
 	{
@@ -42,7 +52,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 // int	main(void)
 // {
-// 	char *s1 = "abbaHello, world!  jakjkhjkhkjhjkjhkjhb";
+// 	char *s1 = "abbb";
 // 	char *set = "ab ";
 // 	char *result;
 

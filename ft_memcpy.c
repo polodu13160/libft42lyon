@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:24:25 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/17 15:58:57 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/21 21:06:45 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
-	if (!dst && !src)
-		return (dst);
 	while (i < n)
 	{
 		d[i] = s[i];
