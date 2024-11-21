@@ -14,8 +14,8 @@ OBJS_B = ${SRCS_B:.c=.o}
 ${NAME}: ${OBJS} 
 	ar rcs ${NAME}	${OBJS}
 
-bonus: $(OBJS_B)
-	ar rcs ${NAME} ${OBJS_B}
+bonus: ${OBJS} $(OBJS_B)
+	ar rcs ${NAME} ${OBJS} ${OBJS_B}
 
 all: ${NAME}
 clean:
