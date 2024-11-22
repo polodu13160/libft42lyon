@@ -6,7 +6,7 @@
 /*   By: pde-petr <pde-petr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:39:15 by pde-petr          #+#    #+#             */
-/*   Updated: 2024/11/17 15:58:57 by pde-petr         ###   ########.fr       */
+/*   Updated: 2024/11/22 17:50:07 by pde-petr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	if (!dest && !src)
-		return (dest);
 	if (src < dest)
 	{
 		while (n-- > 0)
