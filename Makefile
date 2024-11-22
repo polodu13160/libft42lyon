@@ -14,7 +14,10 @@ OBJS_B = ${SRCS_B:.c=.o}
 ${NAME}: ${OBJS} 
 	ar rcs ${NAME}	${OBJS}
 
-bonus: ${OBJS} $(OBJS_B)
+bonus: .bonus
+
+.bonus: ${OBJS} $(OBJS_B)
+	@touch .bonus
 	ar rcs ${NAME} ${OBJS} ${OBJS_B}
 
 all: ${NAME}
@@ -23,6 +26,7 @@ clean:
 fclean:
 	${MAKE} clean 
 	rm -f ${NAME}
+	rm -f .bonus
 re: 
 	${MAKE} fclean 
 	${MAKE} all	
